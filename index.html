@@ -1,0 +1,423 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Banking Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell" id="app">
+    <header class="site-header">
+      <a href="#" class="brand-logo" aria-label="Accueil Mobile Banking">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img">
+            <defs>
+              <linearGradient id="brand-g" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0a8f6a"></stop>
+                <stop offset="100%" stop-color="#2bb8ff"></stop>
+              </linearGradient>
+            </defs>
+            <rect x="4" y="4" width="40" height="40" rx="12" fill="url(#brand-g)"></rect>
+            <path d="M14 26c4-5 7-8 10-8 3 0 5 2 7 5 1 1 2 2 3 3" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"></path>
+            <circle cx="34" cy="16" r="3" fill="#fff"></circle>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>GlobePay</strong>
+          <small>Mobile Banking</small>
+        </span>
+      </a>
+    </header>
+
+    <section class="screen active" id="welcome-screen">
+      <article class="welcome-hero card">
+        <p class="welcome-kicker">Global money, simple</p>
+        <h1>Votre argent sans frontieres.</h1>
+        <p class="welcome-sub">
+          Payez, envoyez et convertissez en quelques secondes avec des frais clairs.
+        </p>
+        <div class="welcome-cta">
+          <button type="button" id="open-login-btn">Se connecter</button>
+          <button type="button" class="ghost" id="open-register-btn">Creer un compte</button>
+        </div>
+      </article>
+
+      <article class="card welcome-stats">
+        <div>
+          <small>Disponibilite</small>
+          <strong>24/7</strong>
+        </div>
+        <div>
+          <small>Comptes devises</small>
+          <strong>+40</strong>
+        </div>
+        <div>
+          <small>Virement instantane</small>
+          <strong>~10 sec</strong>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="section-title">
+          <h3>Pourquoi choisir cette app</h3>
+        </div>
+        <ul class="welcome-features">
+          <li>Solde et cartes en temps reel</li>
+          <li>Transferts internationaux avec suivi</li>
+          <li>Analyse des depenses et budget mensuel</li>
+          <li>Compte multi-utilisateur avec session securisee</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="section-title">
+          <h3>Comment ca marche</h3>
+        </div>
+        <ol class="welcome-steps">
+          <li>
+            <strong>Creez votre compte</strong>
+            <p>Inscription en moins d'une minute, verification immediate.</p>
+          </li>
+          <li>
+            <strong>Ajoutez votre argent</strong>
+            <p>Rechargez votre wallet EUR et activez vos cartes.</p>
+          </li>
+          <li>
+            <strong>Paiements et transferts</strong>
+            <p>Envoyez localement ou a l'international avec suivi en direct.</p>
+          </li>
+        </ol>
+      </article>
+
+      <article class="card">
+        <div class="section-title split">
+          <h3>Experience premium</h3>
+          <small>Concu mobile-first</small>
+        </div>
+        <div class="welcome-grid">
+          <div class="welcome-tile">
+            <small>Carte virtuelle</small>
+            <strong>Creation instantanee</strong>
+          </div>
+          <div class="welcome-tile">
+            <small>Controle budget</small>
+            <strong>Alertes et progression</strong>
+          </div>
+          <div class="welcome-tile">
+            <small>Multi devises</small>
+            <strong>Vue unifiee des soldes</strong>
+          </div>
+          <div class="welcome-tile">
+            <small>Securite</small>
+            <strong>Sessions tokenisees</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="section-title">
+          <h3>Ce que disent nos utilisateurs</h3>
+        </div>
+        <div class="testimonials">
+          <blockquote>
+            "Enfin une app claire pour gerer cartes et virements sans se perdre."
+            <cite>Fatou, entrepreneure</cite>
+          </blockquote>
+          <blockquote>
+            "Le suivi des depenses m'a aide a reprendre le controle du budget."
+            <cite>Rayan, consultant</cite>
+          </blockquote>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="section-title">
+          <h3>Questions frequentes</h3>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Combien de temps prend l'inscription ?</summary>
+            <p>Moins d'une minute pour creer un compte et acceder au dashboard.</p>
+          </details>
+          <details>
+            <summary>Puis-je utiliser plusieurs devises ?</summary>
+            <p>Oui, l'interface affiche un portefeuille multi-devises en une vue.</p>
+          </details>
+          <details>
+            <summary>Mes donnees sont-elles sauvegardees ?</summary>
+            <p>Oui, toutes les operations sont persistees dans la base locale du serveur.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card welcome-final">
+        <h3>Pret a commencer ?</h3>
+        <p>Ouvre ton compte maintenant et pilote tes finances depuis une seule application.</p>
+        <div class="welcome-cta">
+          <button type="button" id="open-login-btn-bottom">Se connecter</button>
+          <button type="button" class="ghost" id="open-register-btn-bottom">Creer un compte</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="screen" id="login-screen">
+      <div class="brand-block login-brand">
+        <div class="brand-chip">wise style onboarding</div>
+        <h1>Envoyez, recevez et suivez votre argent</h1>
+        <p class="brand-subtitle">
+          Un dashboard bancaire moderne pour paiements, cartes et budgets en temps reel.
+        </p>
+        <div class="login-points">
+          <span>Frais transparents</span>
+          <span>Multi devises</span>
+          <span>Session securisee</span>
+        </div>
+      </div>
+      <button type="button" class="ghost" id="back-home-btn">Retour accueil</button>
+      <form id="login-form" class="card form">
+        <h2>Connexion</h2>
+        <p class="form-note">Connectez-vous pour acceder a votre espace client.</p>
+        <label>
+          Email
+          <input type="email" id="email" placeholder="client@bank.com" required />
+        </label>
+        <label>
+          Mot de passe
+          <input type="password" id="password" placeholder="******" required minlength="6" />
+        </label>
+        <p class="inline-error" id="login-error" aria-live="polite"></p>
+        <button type="submit">Se connecter</button>
+      </form>
+      <form id="register-form" class="card form">
+        <h2>Nouveau compte</h2>
+        <p class="form-note">Inscription instantanee avec ouverture de session automatique.</p>
+        <label>
+          Nom complet
+          <input type="text" id="register-name" placeholder="Ex: Alex Dubois" required minlength="2" />
+        </label>
+        <label>
+          Email
+          <input type="email" id="register-email" placeholder="alex@bank.com" required />
+        </label>
+        <label>
+          Mot de passe
+          <input type="password" id="register-password" placeholder="******" required minlength="6" />
+        </label>
+        <p class="inline-error" id="register-error" aria-live="polite"></p>
+        <button type="submit">Creer un compte</button>
+      </form>
+    </section>
+
+    <section class="screen" id="dashboard-screen">
+      <header class="topbar">
+        <div>
+          <p class="brand-tag">Bonjour</p>
+          <h2 id="user-name">Client</h2>
+        </div>
+        <button class="ghost" id="logout-btn">Deconnexion</button>
+      </header>
+
+      <div class="tab-panels">
+        <section class="tab-panel active" data-tab-panel="home">
+          <article class="card hero-card">
+            <div class="hero-head">
+              <div>
+                <p>Valeur totale</p>
+                <h3 id="portfolio-total">0,00 EUR</h3>
+              </div>
+              <span class="badge" id="monthly-trend">+0%</span>
+            </div>
+            <div class="wallet-row" id="wallet-cards"></div>
+          </article>
+
+          <article class="card quick-actions">
+            <div class="section-title">
+              <h3>Actions rapides</h3>
+            </div>
+            <div class="action-grid">
+              <button type="button" class="action-btn" id="action-send">Envoyer</button>
+              <button type="button" class="action-btn" id="action-request">Demander</button>
+              <button type="button" class="action-btn" id="action-convert">Convertir</button>
+              <button type="button" class="action-btn" id="action-topup">Recharger</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="section-title split">
+              <h3>Courbe depenses (14j)</h3>
+              <small id="chart-total-expenses">0,00 EUR</small>
+            </div>
+            <svg id="expense-chart" viewBox="0 0 320 140" aria-label="Courbe des depenses sur 14 jours">
+              <polyline id="expense-line" points="" />
+              <polyline id="expense-area" points="" />
+            </svg>
+            <div class="chart-axis">
+              <small id="chart-start">J-13</small>
+              <small>Aujourd'hui</small>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="section-title">
+              <h3>Budget mensuel</h3>
+            </div>
+            <div class="budget-block">
+              <div class="budget-line">
+                <span>Depense</span>
+                <strong id="spent-amount">0,00 EUR</strong>
+              </div>
+              <div class="progress-track">
+                <span id="budget-progress"></span>
+              </div>
+              <small id="budget-caption">0% du budget utilise</small>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="section-title split">
+              <h3>Activite recente</h3>
+              <div class="filters">
+                <button type="button" class="ghost filter-btn active" data-filter="all">Toutes</button>
+                <button type="button" class="ghost filter-btn" data-filter="in">Entrees</button>
+                <button type="button" class="ghost filter-btn" data-filter="out">Sorties</button>
+              </div>
+            </div>
+            <ul id="transactions-list" class="transactions"></ul>
+          </article>
+        </section>
+
+        <section class="tab-panel" data-tab-panel="cards">
+          <article class="card payment-card">
+            <div class="payment-header">
+              <div>
+                <p>Carte active</p>
+                <h3 id="active-card-name">Carte Premium</h3>
+              </div>
+              <span id="card-status-badge" class="badge ok">Active</span>
+            </div>
+            <p id="active-card-number" class="card-number">**** **** **** 0000</p>
+            <div class="card-actions">
+              <button type="button" class="ghost" id="toggle-card-btn">Geler la carte</button>
+              <button type="button" class="ghost" id="new-virtual-btn">Nouvelle virtuelle</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="section-title">
+              <h3>Toutes les cartes</h3>
+            </div>
+            <ul id="cards-list" class="cards-list"></ul>
+          </article>
+        </section>
+
+        <section class="tab-panel" data-tab-panel="payments">
+          <article class="card">
+            <div class="section-title">
+              <h3>Beneficiaires favoris</h3>
+            </div>
+            <ul id="beneficiaries-list" class="beneficiaries"></ul>
+          </article>
+
+          <article class="card">
+            <div class="section-title">
+              <h3>Virement international</h3>
+            </div>
+            <form id="transfer-form" class="form">
+              <label>
+                Beneficiaire
+                <input type="text" id="recipient" placeholder="Nom du beneficiaire" required />
+              </label>
+              <label>
+                IBAN
+                <input type="text" id="iban" placeholder="FR76..." required minlength="10" />
+              </label>
+              <label>
+                Montant (EUR)
+                <input type="number" id="amount" placeholder="100" min="1" step="0.01" required />
+              </label>
+              <label>
+                Reference
+                <input type="text" id="reference" placeholder="Loyer / Facture" />
+              </label>
+              <label>
+                Type
+                <select id="transfer-speed">
+                  <option value="standard">Standard (J+1)</option>
+                  <option value="instant">Instantane (+1.50 EUR)</option>
+                </select>
+              </label>
+              <p class="inline-error" id="transfer-error" aria-live="polite"></p>
+              <button type="submit">Envoyer</button>
+            </form>
+          </article>
+        </section>
+
+        <section class="tab-panel" data-tab-panel="profile">
+          <article class="card">
+            <div class="section-title">
+              <h3>Profil</h3>
+            </div>
+            <div class="profile-grid">
+              <div>
+                <small>Client</small>
+                <strong id="profile-name">-</strong>
+              </div>
+              <div>
+                <small>Email</small>
+                <strong id="profile-email">-</strong>
+              </div>
+              <div>
+                <small>Budget mensuel</small>
+                <strong id="profile-budget">0,00 EUR</strong>
+              </div>
+              <div>
+                <small>Statut API</small>
+                <strong id="api-status">Connecte</strong>
+              </div>
+            </div>
+            <button type="button" id="delete-account-btn">Supprimer mon compte</button>
+          </article>
+
+          <article class="card insights">
+            <div class="section-title">
+              <h3>Insights</h3>
+            </div>
+            <div class="insight-grid">
+              <div class="insight-item">
+                <small>Revenus (30j)</small>
+                <strong id="income-30d">0,00 EUR</strong>
+              </div>
+              <div class="insight-item">
+                <small>Depenses (30j)</small>
+                <strong id="expense-30d">0,00 EUR</strong>
+              </div>
+              <div class="insight-item">
+                <small>Taux epargne</small>
+                <strong id="saving-rate">0%</strong>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+
+      <nav class="tabbar" aria-label="Navigation principale">
+        <button type="button" class="tab-btn active" data-tab="home">Accueil</button>
+        <button type="button" class="tab-btn" data-tab="cards">Cartes</button>
+        <button type="button" class="tab-btn" data-tab="payments">Paiements</button>
+        <button type="button" class="tab-btn" data-tab="profile">Profil</button>
+      </nav>
+    </section>
+
+    <section class="screen" id="status-screen">
+      <article class="card status-card">
+        <h2 id="status-title">Statut</h2>
+        <p id="status-message"></p>
+        <button id="status-back-btn">Retour au tableau de bord</button>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

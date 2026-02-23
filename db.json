@@ -1,0 +1,143 @@
+{
+  "users": [
+    {
+      "id": "u_seed",
+      "name": "Sophie Martin",
+      "email": "client@bank.com",
+      "password": "123456",
+      "monthlyBudget": 2500,
+      "wallets": [
+        {
+          "code": "EUR",
+          "balance": 4542.8
+        },
+        {
+          "code": "USD",
+          "balance": 880.4
+        },
+        {
+          "code": "GBP",
+          "balance": 620.35
+        }
+      ],
+      "cards": [
+        {
+          "id": "card_main",
+          "label": "Carte Premium",
+          "number": "**** **** **** 8342",
+          "frozen": false,
+          "type": "physical"
+        },
+        {
+          "id": "card_virtual_1",
+          "label": "Virtual Shopping",
+          "number": "**** **** **** 1930",
+          "frozen": false,
+          "type": "virtual"
+        }
+      ],
+      "beneficiaries": [
+        {
+          "id": "b1",
+          "name": "Ali B.",
+          "iban": "FR7630006000011234567890189",
+          "country": "FR"
+        },
+        {
+          "id": "b2",
+          "name": "Nora K.",
+          "iban": "FR1420041010050500013M02606",
+          "country": "FR"
+        },
+        {
+          "id": "b3",
+          "name": "Mark P.",
+          "iban": "GB29NWBK60161331926819",
+          "country": "GB"
+        }
+      ],
+      "transactions": [
+        {
+          "id": 1771863914640,
+          "label": "Top up carte",
+          "date": "2026-02-23",
+          "amount": 100,
+          "currency": "EUR",
+          "kind": "income"
+        },
+        {
+          "id": 1771863906130,
+          "label": "Conversion USD vers EUR",
+          "date": "2026-02-23",
+          "amount": 0,
+          "currency": "EUR",
+          "kind": "info"
+        },
+        {
+          "id": 1771862034432,
+          "label": "Conversion USD vers EUR",
+          "date": "2026-02-23",
+          "amount": 0,
+          "currency": "EUR",
+          "kind": "info"
+        },
+        {
+          "id": 1771862031517,
+          "label": "Top up carte",
+          "date": "2026-02-23",
+          "amount": 100,
+          "currency": "EUR",
+          "kind": "income"
+        },
+        {
+          "id": 1,
+          "label": "Salaire",
+          "date": "2026-02-01",
+          "amount": 3200,
+          "currency": "EUR",
+          "kind": "income"
+        },
+        {
+          "id": 2,
+          "label": "Supermarche",
+          "date": "2026-02-12",
+          "amount": -86.4,
+          "currency": "EUR",
+          "kind": "expense"
+        },
+        {
+          "id": 3,
+          "label": "Electricite",
+          "date": "2026-02-15",
+          "amount": -64.99,
+          "currency": "EUR",
+          "kind": "expense"
+        },
+        {
+          "id": 4,
+          "label": "Abonnement SaaS",
+          "date": "2026-02-16",
+          "amount": -39,
+          "currency": "EUR",
+          "kind": "expense"
+        },
+        {
+          "id": 5,
+          "label": "Freelance payout",
+          "date": "2026-02-18",
+          "amount": 540,
+          "currency": "EUR",
+          "kind": "income"
+        },
+        {
+          "id": 6,
+          "label": "Restaurant",
+          "date": "2026-02-21",
+          "amount": -47.8,
+          "currency": "EUR",
+          "kind": "expense"
+        }
+      ]
+    }
+  ]
+}
